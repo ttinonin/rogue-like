@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2p1y0k8hqit4"]
+
+[ext_resource type="Script" path="res://scripts/ability/sword_ability_controller.gd" id="1_160qp"]
+[ext_resource type="PackedScene" uid="uid://di8vjbpchen0w" path="res://scenes/ability/sword_ability.tscn" id="2_qbrem"]
+
+[node name="SwordAbilityController" type="Node"]
+script = ExtResource("1_160qp")
+sword_ability = ExtResource("2_qbrem")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+autostart = true
