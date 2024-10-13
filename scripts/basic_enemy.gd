@@ -3,7 +3,10 @@ extends CharacterBody2D
 const MAX_SPEED = 75
 
 func _ready():
-	pass
+	$Area2D.area_entered.connect(on_area_entered)
+
+func on_area_entered(other_area: Area2D):
+	queue_free()
 
 func _process(delta: float) -> void:
 	var direction = get_direction_to_player()

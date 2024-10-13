@@ -3,9 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://oyrt5qwoe28p" path="res://scenes/game_camera.tscn" id="1_0s6nk"]
 [ext_resource type="TileSet" uid="uid://c3umdgi3duq17" path="res://resources/tileset.tres" id="1_0ulwo"]
 [ext_resource type="PackedScene" uid="uid://c4mm46d3kr8kt" path="res://scenes/player.tscn" id="1_l5cyf"]
-[ext_resource type="PackedScene" uid="uid://dglqhe01yr81a" path="res://scenes/basic_enemy.tscn" id="4_56dnk"]
+[ext_resource type="PackedScene" uid="uid://f3ru0v6e2cn3" path="res://scenes/managers/enemy_manager.tscn" id="1_mkl6v"]
 
 [node name="Main" type="Node"]
+
+[node name="EnemyManager" parent="." instance=ExtResource("1_mkl6v")]
 
 [node name="GameCamera" parent="." instance=ExtResource("1_0s6nk")]
 
@@ -15,9 +17,3 @@ tile_set = ExtResource("1_0ulwo")
 
 [node name="player" parent="." instance=ExtResource("1_l5cyf")]
 position = Vector2(67, 56)
-
-[node name="BasicEnemy" parent="." instance=ExtResource("4_56dnk")]
-position = Vector2(430, 209)
-
-[node name="BasicEnemy2" parent="." instance=ExtResource("4_56dnk")]
-position = Vector2(926, -153)
